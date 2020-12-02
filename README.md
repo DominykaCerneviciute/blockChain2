@@ -26,8 +26,8 @@
       python main4.py
       
 ## main5.py
-   ### Programa apskaičiuoja įvesto bloko hash'ą
-   ### Programa išveda tiek esamą, tiek apskaičiuotą bloko hash'ą
+   #### Programa apskaičiuoja įvesto bloko hash'ą
+   #### Programa išveda tiek esamą, tiek apskaičiuotą bloko hash'ą
    
 ### Veikimas
     1. Įvedamas bloko numeris
