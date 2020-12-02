@@ -10,12 +10,12 @@ for output in decoded_tx['vout']:
 print("Outputs: ", tx_value)
 input_tx_value = 0
 for input in decoded_tx['vin']:
-        if input.has_key("'txid'"):
-            input_tx = input['txid']
-            input_raw_tx = p.getrawtransaction(input_tx)
+        if input.has_key('txid'):
+            index_of_tx = input['vout']
+            input_raw_tx = p.getrawtransaction(input['txid'])
             input_decoded_tx = p.decoderawtransaction(input_raw_tx)
-            for output in input_decoded_tx['vout']:
-                input_tx_value = input_tx_value + output['value']
+            output_vout = input_decoded_tx['vout'][index_of_tx]
+            input_tx_value = input_tx_value + output_vout['value']
             fee = input_tx_value - tx_value
         else:
             fee = 0
